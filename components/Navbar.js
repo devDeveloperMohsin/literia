@@ -12,7 +12,7 @@ function Navbar() {
 
   return (
     <>
-      <header className="text-gray-600 body-font bg-white border-b sticky top-0 z-50">
+      <header className="text-gray-600 body-font bg-white border-b sticky top-0 z-20">
         <div className="container flex flex-wrap p-5 flex-col md:flex-row items-center max-w-[1200px] mx-auto">
           <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
             <svg
@@ -36,10 +36,10 @@ function Navbar() {
             <Link href="/blogs" className="mr-5 hover:text-gray-900">
               Blogs
             </Link>
-            <Link href="/" className="mr-5 hover:text-gray-900">
+            <Link href="/digital-assets" className="mr-5 hover:text-gray-900">
               Digital Assets
             </Link>
-            <Link href="/" className="mr-5 hover:text-gray-900">
+            <Link href="/books" className="mr-5 hover:text-gray-900">
               Books
             </Link>
             <button
@@ -80,37 +80,51 @@ function Navbar() {
       </header>
 
       {/* Contact Us Modal */}
-      <Modal open={contactModalOpen} setOpen={setContactModalOpen}>
+      <Modal open={contactModalOpen} setOpen={setContactModalOpen} panelClasses="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
         <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-          <div className="sm:flex sm:items-start">
-            <div className="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10">
-              Icon
-            </div>
-            <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
-              
-              <div className="mt-2">
-                <p className="text-sm text-gray-500">
-                  Are you sure you want to deactivate your account? All of your
-                  data will be permanently removed. This action cannot be
-                  undone.
-                </p>
-              </div>
-            </div>
+          <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">
+            Contact Us
+          </h2>
+          <p className="leading-relaxed mb-5 text-gray-600">
+            Write your message and we will reach out to you soon.
+          </p>
+          <div className="relative mb-4">
+            <label className="leading-7 text-sm text-gray-600">Name</label>
+            <input
+              type="email"
+              name="email"
+              className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            />
+          </div>
+          <div className="relative mb-4">
+            <label className="leading-7 text-sm text-gray-600">Email</label>
+            <input
+              type="email"
+              name="email"
+              className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            />
+          </div>
+          <div className="relative mb-4">
+            <label className="leading-7 text-sm text-gray-600">Message</label>
+            <textarea
+              name="message"
+              className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+            ></textarea>
           </div>
         </div>
+
         <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
           <button
             type="button"
-            className="inline-flex w-full justify-center rounded-md border border-transparent bg-red-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
+            className="inline-flex w-full justify-center rounded-md border border-transparent bg-indigo-500 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
             onClick={() => setContactModalOpen(false)}
           >
-            Deactivate
+            Submit
           </button>
           <button
             type="button"
             className="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
             onClick={() => setContactModalOpen(false)}
-            // ref={cancelButtonRef}
           >
             Cancel
           </button>

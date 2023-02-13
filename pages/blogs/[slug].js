@@ -2,12 +2,18 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { FiChevronsRight } from "react-icons/fi";
 import PageTitle from "../../components/PageTitle";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaTwitter,
+} from "react-icons/fa";
 
 export default function Home() {
   const breadCrumbs = {
-    Blogs: "",
+    Blogs: "/blogs",
+    "The best 8 cities in world": "",
   };
 
   return (
@@ -20,54 +26,236 @@ export default function Home() {
       </Head>
 
       {/* Page Title */}
-      <PageTitle breadCrumbs={breadCrumbs} />
+      <PageTitle breadCrumbs={breadCrumbs} title="Blog Details" />
       {/* End Page Title */}
 
       {/* Blogs */}
-      <section className="container py-24 mx-auto max-w-[1200px]">
-        {[1, 1, 1, 1].map((blog, index) => (
-          <div className="flex justify-center" key={index}>
-            <div className="flex flex-col justify-center">
-              <div className="flex flex-col md:flex-row max-w-7xl justify-center items-center">
-                <div className="overflow-hidden w-full m-4 shadow-sm flex flex-col md:flex-row justify-center">
-                  <div className="flex flex-col md:flex-row items-center">
-                    <div className="w-full overflow-hidden">
-                      <Image
-                        src="https://source.unsplash.com/700x350/?city"
-                        alt=""
-                        height={300}
-                        width={500}
-                        className="object-cover w-full h-full"
-                      />
-                    </div>
-                    <div className="md:w-2/3 m-6">
-                      <div className="flex text-gray-500 text-sm">
-                        <Link href="/" className="m-1 font-bold hover:text-red-500">Entertainment:</Link>
-                        <div className="m-1">31 March, 2023</div>
-                      </div>
-                      <Link
-                        href="/"
-                        className="font-bold text-black text-xl mt-2 hover:text-indigo-500"
-                      >
-                        The 8 Best City Lights In The World! The 8 Best City Lights In The World!
-                      </Link>
-                      <div className="text-sm text-gray-500 mt-4 mt-2">
-                        There's something about city lights that make them so
-                        captivating and romantic. Maybe it's because they remind
-                        us of all the possibilities that exist in the world, or
-                        maybe it's because they're just so darn pretty to look
-                        at. No matter what the reason is, there's no denying
-                        that city lights are some of the most beautiful things
-                        in the world.
-                      </div>
-                      <Link href="/" className="text-indigo-500 mt-2 text-sm flex items-center">Read More <FiChevronsRight className="-mb-1 ml-1"/> </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <section className="container py-24 mx-auto max-w-[1200px] px-5">
+        {/* Title */}
+        <div className="flex relative lg:justify-center lg:h-[450px] flex-col">
+          <p className="text-sm text-gray-600">
+            <span className="px-3 mr-2 py-1 uppercase rounded-full text-white bg-red-500 font-semibold text-sm cursor-pointer active:bg-indigo-500 transition duration-300 ease">
+              City
+            </span>
+            Published: December 21, 2022{" "}
+          </p>
+          <h1 className="text-3xl my-5 md:text-5xl font-bold max-w-full w-[800px]">
+            <span className="bg-white py-2 pr-2 inline-block">
+              The best 8 cities in world you should visit
+            </span>
+          </h1>
+
+          <div className="flex items-center ">
+            <p className="mr-4">Share:</p>
+            <a
+              href=""
+              className="border block h-8 w-8 rounded-full p-2 mr-2 hover:border-gray-300 hover:bg-gray-100"
+            >
+              <FaFacebookF color="#4064ac" />
+            </a>
+            <a
+              href=""
+              className="border block h-8 w-8 rounded-full p-2 mr-2 hover:border-gray-300 hover:bg-gray-100"
+            >
+              <FaTwitter color="#1c9cea" />
+            </a>
+            <a
+              href=""
+              className="border block h-8 w-8 rounded-full p-2 mr-2 hover:border-gray-300 hover:bg-gray-100"
+            >
+              <FaLinkedinIn color="#0270ad" />
+            </a>
+            <a
+              href=""
+              className="border block h-8 w-8 rounded-full p-2 mr-2 hover:border-gray-300 hover:bg-gray-100"
+            >
+              <FaInstagram color="#ec7020" />
+            </a>
           </div>
-        ))}
+
+          <Image
+            src="https://images.unsplash.com/photo-1465447142348-e9952c393450?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80g"
+            alt=""
+            height={400}
+            width={600}
+            className="lg:absolute mt-5 lg:mt-0 -z-10 top-0 right-0 h-auto w-full lg:h-[450px] lg:w-auto lg:max-w-[600px]"
+          />
+        </div>
+
+        {/* End Title */}
+
+        {/* Body */}
+        <div className="md:flex mt-5">
+          {/* Content */}
+          <div className="ck-content pr-3">
+            <h1>
+              I guess if you want children beaten, you have to do it yourself.
+            </h1>
+            <p>
+              Then throw her in the laundry room, which will hereafter be
+              referred to as "the brig". I don't 'need' to drink. I can quit
+              anytime I want! We don't have a brig. Who are those horrible
+              orange men?
+            </p>
+            <p>
+              No! The kind with looting and maybe starting a few fires!{" "}
+              <strong>
+                {" "}
+                Whoa a real live robot; or is that some kind of cheesy New
+                Year's costume?
+              </strong>{" "}
+              <em> Oh, I think we should just stay friends.</em> Um, is this the
+              boring, peaceful kind of taking to the streets?
+            </p>
+            <h2>Interesting. No, wait, the other thing: tedious.</h2>
+            <p>
+              We'll go deliver this crate like professionals, and then we'll go
+              home. Do a flip! Kif might! No! I want to live! There are still
+              too many things I don't own!
+            </p>
+            <ol>
+              <li>When will that be?</li>
+              <li>
+                With a warning label this big, you know they gotta be fun!
+              </li>
+              <li>
+                Bender, this is Fry's decision… and he made it wrong. So it's
+                time for us to interfere in his life.
+              </li>
+            </ol>
+
+            <h3>Pansy.</h3>
+            <p>
+              Hi, I'm a naughty nurse, and I really need someone to talk to.
+              $9.95 a minute. It's okay, Bender. I like cooking too. Now what?
+              Is today's hectic lifestyle making you tense and impatient?
+            </p>
+            <ul>
+              <li>Why am I sticky and naked? Did I miss something fun?</li>
+              <li>But existing is basically all I do!</li>
+              <li>Ummm…to eBay?</li>
+            </ul>
+
+            <p>
+              What are their names? It's toe-tappingly tragic! Oh yeah, good
+              luck with that. And until then, I can never die?
+            </p>
+            <p>
+              It doesn't look so shiny to me. I videotape every customer that
+              comes in here, so that I may blackmail them later. Who said that?
+              SURE you can die! You want to die?! Kif might! Fry! Quit doing the
+              right thing, you jerk!
+            </p>
+            <p>
+              Good news, everyone! I've taught the toaster to feel love! Wow,
+              you got that off the Internet? In my day, the Internet was only
+              used to download pornography. Now what? Who am I making this out
+              to? Dear God, they'll be killed on our doorstep! And there's no
+              trash pickup until January 3rd.
+            </p>
+            <p>
+              I'm a thing. Now, now. Perfectly symmetrical violence never solved
+              anything. Bender, we're trying our best. Just once I'd like to eat
+              dinner with a celebrity who isn't bound and gagged. Is that a
+              cooking show?
+            </p>
+            <p>
+              We need rest. The spirit is willing, but the flesh is spongy and
+              bruised. One hundred dollars. You guys aren't Santa! You're not
+              even robots. How dare you lie in front of Jesus? You know, I was
+              God once.
+            </p>
+            <p>
+              Ow, my spirit! Tell them I hate them. No argument here. Bender?!
+              You stole the atom.
+            </p>
+            <p>
+              Oh right. I forgot about the battle. There's one way and only one
+              way to determine if an animal is intelligent. Dissect its brain!
+              Good news, everyone! There's a report on TV with some very bad
+              news! Why did you bring us here?
+            </p>
+            <p>
+              The key to victory is discipline, and that means a well made bed.
+              You will practice until you can make your bed in your sleep. I
+              just want to talk. It has nothing to do with mating. Fry, that
+              doesn't make sense.
+            </p>
+            <p>
+              Who said that? SURE you can die! You want to die?! Perhaps, but
+              perhaps your civilization is merely the sewer of an even greater
+              society above you! Bender, I didn't know you liked cooking. That's
+              so cute.
+            </p>
+            <p>
+              Bender, you risked your life to save me! Oh, I don't have time for
+              this. I have to go and buy a single piece of fruit with a coupon
+              and then return it, making people wait behind me while I complain.
+              You lived before you met me?!
+            </p>
+            <p>
+              Are you crazy? I can't swallow that. We need rest. The spirit is
+              willing, but the flesh is spongy and bruised. Hello Morbo, how's
+              the family? I haven't felt much of anything since my guinea pig
+              died.
+            </p>
+          </div>
+          {/* End Content */}
+
+          {/* Sidebar */}
+          <div className="min-w-[250px] md:border-l md:p-3 mt-5 md:mt-0">
+            {/* Categories */}
+            <div>
+              <h2 className="font-bold text-xl">
+                <span className="text-indigo-500">Popular</span> Categories
+              </h2>
+              <ul>
+                <li>
+                  <a href="" className="hover:text-indigo-500">
+                    - Cars
+                  </a>
+                </li>
+                <li>
+                  <a href="" className="hover:text-indigo-500">
+                    - Sports
+                  </a>
+                </li>
+                <li>
+                  <a href="" className="hover:text-indigo-500">
+                    - Vehicals
+                  </a>
+                </li>
+                <li>
+                  <a href="" className="hover:text-indigo-500">
+                    - Vehicals
+                  </a>
+                </li>
+              </ul>
+            </div>
+            {/* End Categories */}
+
+            {/* Newsletter */}
+            <div className="mt-5 p-2 bg-indigo-500 rounded text-white">
+              <h2 className="font-bold text-xl">Newsletter</h2>
+              <p>
+                Subsribe to our news letter and get latest eBooks directly on
+                your email.
+              </p>
+              <input
+                type="text"
+                placeholder="Your Email"
+                class="w-full mt-2 bg-white rounded border border-gray-300 focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              />
+              <button class="mt-2 text-white bg-indigo-400 w-full text-center border-0 py-2 px-6 focus:outline-none hover:bg-indigo-300 rounded">
+                Subscribe
+              </button>
+            </div>
+            {/* End Newsletter */}
+          </div>
+          {/* End Sidebar */}
+        </div>
+
+        {/* End Body */}
       </section>
       {/* End Blogs */}
     </>

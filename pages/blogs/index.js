@@ -20,7 +20,7 @@ export default function Home() {
       </Head>
 
       {/* Page Title */}
-      <PageTitle breadCrumbs={breadCrumbs} />
+      <PageTitle breadCrumbs={breadCrumbs} title="Blogs" />
       {/* End Page Title */}
 
       {/* Blogs */}
@@ -46,7 +46,7 @@ export default function Home() {
                         <div className="m-1">31 March, 2023</div>
                       </div>
                       <Link
-                        href="/"
+                        href="/blogs/best-cities-in-world"
                         className="font-bold text-black text-xl mt-2 hover:text-indigo-500"
                       >
                         The 8 Best City Lights In The World! The 8 Best City Lights In The World!

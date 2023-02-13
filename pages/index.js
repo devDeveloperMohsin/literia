@@ -12,42 +12,74 @@ const inDemandBooks = [
   {
     id: 1,
     name: "Basic Tee",
-    href: "#",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
+    imageSrc: "https://covers.openlibrary.org/b/id/8587804-M.jpg",
     imageAlt: "Front of men's Basic Tee in black.",
-    price: "$35",
-    color: "Black",
+    category: "Classic",
+    author: "Richard",
+    available: "Yes",
   },
   {
     id: 2,
     name: "Basic Tee",
-    href: "#",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
+    imageSrc: "https://covers.openlibrary.org/w/id/221872-M.jpg",
     imageAlt: "Front of men's Basic Tee in black.",
-    price: "$35",
-    color: "Black",
+    category: "Classic",
+    author: "Richard",
+    available: "Yes",
   },
   {
     id: 3,
     name: "Basic Tee",
-    href: "#",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
+    imageSrc: "https://covers.openlibrary.org/b/id/10389354-M.jpg",
     imageAlt: "Front of men's Basic Tee in black.",
-    price: "$35",
-    color: "Black",
+    category: "Classic",
+    author: "Richard",
+    available: "Yes",
   },
   {
     id: 4,
     name: "Basic Tee",
-    href: "#",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
+    imageSrc: "https://covers.openlibrary.org/b/id/9407338-M.jpg",
     imageAlt: "Front of men's Basic Tee in black.",
-    price: "$35",
-    color: "Black",
+    category: "Classic",
+    author: "Richard",
+    available: "Yes",
+  },
+  {
+    id: 5,
+    name: "Basic Tee",
+    imageSrc: "https://covers.openlibrary.org/b/id/9168741-M.jpg",
+    imageAlt: "Front of men's Basic Tee in black.",
+    category: "Classic",
+    author: "Richard",
+    available: "Yes",
+  },
+  {
+    id: 6,
+    name: "Basic Tee",
+    imageSrc: "https://covers.openlibrary.org/b/id/10551941-M.jpg",
+    imageAlt: "Front of men's Basic Tee in black.",
+    category: "Classic",
+    author: "Richard",
+    available: "Yes",
+  },
+  {
+    id: 7,
+    name: "Basic Tee",
+    imageSrc: "https://covers.openlibrary.org/w/id/575572-M.jpg",
+    imageAlt: "Front of men's Basic Tee in black.",
+    category: "Classic",
+    author: "Richard",
+    available: "Yes",
+  },
+  {
+    id: 8,
+    name: "Basic Tee",
+    imageSrc: "https://covers.openlibrary.org/w/id/12015500-M.jpg",
+    imageAlt: "Front of men's Basic Tee in black.",
+    category: "Classic",
+    author: "Richard",
+    available: "Yes",
   },
 ];
 
@@ -257,10 +289,10 @@ export default function Home() {
                 naturalSlideWidth={100}
                 naturalSlideHeight={40}
                 totalSlides={inDemandBooks.length}
-                visibleSlides={4}
+                visibleSlides={6}
                 infinite={true}
                 isIntrinsicHeight={true}
-                interval={1000}
+                interval={3000}
                 isPlaying={true}
               >
                 <Slider>
@@ -277,7 +309,7 @@ export default function Home() {
                         <div className="mt-4 flex justify-between">
                           <div>
                             <h3 className="text-sm text-gray-700">
-                              <a href={product.href}>
+                              <a href="/">
                                 <span
                                   aria-hidden="true"
                                   className="absolute inset-0"
@@ -286,12 +318,9 @@ export default function Home() {
                               </a>
                             </h3>
                             <p className="mt-1 text-sm text-gray-500">
-                              {product.color}
+                              {product.category}
                             </p>
                           </div>
-                          <p className="text-sm font-medium text-gray-900">
-                            {product.price}
-                          </p>
                         </div>
                       </div>
                     </Slide>
@@ -731,7 +760,7 @@ export default function Home() {
           <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
             <h1 className="title-font sm:text-4xl text-3xl mb-4 font-bold text-gray-900">
               Get an <strong>eBook</strong> directly{" "}
-              <span class="text-indigo-500">on your Email</span>
+              <span className="text-indigo-500">on your Email</span>
             </h1>
             <p className="mb-8 leading-relaxed">
               Enjoy your weekends by reading the most popular book of the week
@@ -740,7 +769,7 @@ export default function Home() {
             <div className="flex w-full md:justify-start justify-center items-end">
               <div className="relative mr-4 lg:w-full xl:w-1/2 w-2/4">
                 <label
-                  for="hero-field"
+                  htmlFor="hero-field"
                   className="leading-7 text-sm text-gray-600"
                 >
                   Subscribe!
@@ -840,7 +869,7 @@ export default function Home() {
           <iframe
             width="100%"
             height="100%"
-            frameborder="0"
+            frameBorder="0"
             marginHeight="0"
             marginWidth="0"
             title="map"
