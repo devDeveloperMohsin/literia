@@ -537,7 +537,6 @@ export default function BooksPage() {
       {/* End Books Section */}
 
       {/* Book Details Modal */}
-      {/* Contact Us Modal */}
       <Modal
         open={bookDetailsModalOpen}
         setOpen={setBookDetailsModalOpen}
@@ -601,7 +600,6 @@ export default function BooksPage() {
           </div>
         </div>
       </Modal>
-      {/* End Contact Us Modal */}
       {/* Book Details Modal */}
     </>
   );
